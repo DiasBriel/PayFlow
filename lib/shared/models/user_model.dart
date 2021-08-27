@@ -4,7 +4,7 @@ class UserModel {
   final String name;
   final String? photoURL;
 
-  UserModel({required this.name, required this.photoURL});
+  UserModel({required this.name, this.photoURL});
 
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(name: map['name'], photoURL: map['photoURL']);
@@ -18,6 +18,5 @@ class UserModel {
         "photoURL": photoURL,
       };
 
-  String toJson() => jsonEncode(toMap()); //transforma o map em uma string
-
+  String toJson() => jsonEncode(toMap());
 }
