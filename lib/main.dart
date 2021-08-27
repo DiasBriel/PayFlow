@@ -31,9 +31,7 @@ class _AppFirebaseState extends State<AppFirebase> {
               ),
             ),
           );
-        }
-
-        else if (snapshot.connectionState == ConnectionState.done) {
+        } else if (snapshot.connectionState == ConnectionState.done) {
           return AppWidget();
         }
 
